@@ -17,5 +17,5 @@ def json_to_yolov5_txt(json_folder_path,save_txt_folder_path):
             bbox=np.array(i['bbox'],dtype=np.float32)
             bbox_to_resize=np.array([1/width,1/height,1/width,1/height],dtype=np.float32)
             rebbox=bbox*bbox_to_resize
-            new_txt.write(str(category_id)+' '+str(rebbox[0])+' '+str(rebbox[1])+' '+str(rebbox[2])+' '+str(rebbox[3])+'\n')
+            new_txt.write(str(category_id)+' '+str(rebbox[0])+' '+str(rebbox[1])+' '+str(rebbox[2]-rebbox[0])+' '+str(rebbox[3]-rebbox[1])+'\n')
     
