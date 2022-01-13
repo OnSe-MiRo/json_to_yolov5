@@ -20,3 +20,14 @@ def json_to_yolov5_txt(json_folder_path,save_txt_folder_path):
             rebbox=np.divide(bbox,bbox_to_resize)
             new_txt.write(str(category_id)+' '+str(rebbox[0])+' '+str(rebbox[1])+' '+str(rebbox[2])+' '+str(rebbox[3])+'\n')
     
+def parse_opt(known=False):
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--json',type=str,default='./',help='your/Own/json/foler')
+    parser.add_argument('--save',type=str,default='./',help='your/Onw/txt/foler')
+    opt = parser.parse_known_args()[0] if known else parser.parse_args()
+    return opt
+
+if __name__=="__main__":
+    opt = parse_opt()
+    print(opt)
+    main(opt.json,opt.save)
