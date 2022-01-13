@@ -10,4 +10,4 @@ window:
 python json_to_yolov5_txt.py --json ./json --save ./yolo_labels
 
 linux:
-python3 json_to_yolov5_txt.py --json ~/json --save ./yolo_labels
+python3 json_to_yolov5_txt.py --json ./json --save ./yolo_labels
