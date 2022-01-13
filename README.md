@@ -2,9 +2,5 @@
 
 example Source Code :
 ```
-import json_to_yolov5_txt
-
-json_folder_path = 'your/Own/json/foler'
-save_txt_folder_path = 'your/Onw/txt/foler'
-json_to_yolov5_txt.json_to_yolov5_txt(json_folder_path,save_txt_folder_path)
+python json_to_yolov5_txt.py --json your_json_file_path --save save_yolov5_txt_file_path
 ```
